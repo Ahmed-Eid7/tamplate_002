@@ -1,0 +1,149 @@
+@use "./files/variable" as *;
+
+header {
+  height: 100vh;
+  background-image: url(../../assets/header.jpg);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+  }
+}
+
+.header__nav {
+  height: 100px;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+
+  border-bottom: 1px solid $main-color;
+
+  .logo {
+    font-size: 2.5rem;
+
+    span {
+      color: $main-color;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+    flex: 1;
+
+    li {
+      height: 100px;
+      border-bottom: 2px solid transparent;
+
+      a {
+        font-size: 1.5rem;
+        transition: all 0.3s ease-in-out;
+        height: 100%;
+        display: inline-block;
+        display: flex;
+        align-items: center;
+      }
+
+      &:hover {
+        border-bottom: 2px solid $main-color;
+      }
+
+      &:hover a {
+        color: $main-color;
+      }
+    }
+  }
+
+  .search {
+    font-size: 2rem;
+    border-left: 1px solid #fff;
+    padding-left: 2rem;
+    transition: all $transition;
+    cursor: pointer;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+
+.header__intro {
+  color: #fff;
+  background-color: rgb(213, 189, 175, 0.6);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  padding: 8rem 2rem 8rem 25rem;
+  width: 50%;
+
+  .text {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 1.9;
+  }
+}
+
+.header__arrow {
+  color: #fff;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding-inline: 3rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  i {
+    cursor: pointer;
+  }
+}
+
+.header__bullet {
+  display: flex;
+  gap: 10px;
+
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  span {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: $transition;
+    cursor: pointer;
+
+    &.active {
+      background-color: $main-color;
+    }
+
+    &:hover {
+      background-color: $main-color;
+    }
+  }
+}
