@@ -1,0 +1,14 @@
+.about {
+  padding-top: 10rem;
+
+  .about-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+
+    img {
+      width: 300px;
+    }
+  }
+}

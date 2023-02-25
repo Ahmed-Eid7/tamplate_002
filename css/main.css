@@ -552,3 +552,22 @@ header .overlay {
   padding: 1rem 2rem;
   font-size: 1.5rem;
 }
+
+.about {
+  padding-top: 10rem;
+}
+.about .about-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+}
+.about .about-image img {
+  width: 300px;
+}
