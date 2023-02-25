@@ -1,0 +1,42 @@
+@use "./variable" as *;
+
+.services {
+  padding-block: 10rem;
+}
+
+.services__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+  gap: 3rem;
+
+  .service {
+    display: flex;
+    gap: 5rem;
+    margin-bottom: 4rem;
+
+    i {
+      font-size: 4.5rem;
+    }
+
+    .service--info {
+      h2 {
+        color: $main-color;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+        color: #777;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .service {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 3rem;
+    gap: 2rem;
+  }
+}

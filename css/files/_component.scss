@@ -1,5 +1,47 @@
-// Section Header
+// Section Header Component
 .section__header {
+  text-align: center;
+  width: 45%;
   margin-inline: auto;
-  border: 1px soid #000;
+  margin-bottom: 6rem;
+
+  h2 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .seperator {
+    width: 20%;
+    margin-inline: auto;
+    margin-block: 1rem 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div:not(.circle) {
+      width: 100%;
+      height: 1px;
+      background-color: #000;
+      flex: 1;
+    }
+
+    .circle {
+      width: 15px;
+      height: 15px;
+      border: 1px solid #000;
+      border-radius: 50%;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: #777;
+  }
+}
+
+@media (max-width: 767px) {
+  .section__header {
+    width: 90%;
+  }
 }
