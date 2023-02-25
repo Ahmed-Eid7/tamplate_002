@@ -1,0 +1,60 @@
+@use "./variable" as *;
+
+.stats {
+  background-image: url(../../assets/stats.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  // padding-block: 20rem;
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 10rem;
+  }
+
+  .stats__content {
+    color: #fff;
+    width: 70%;
+    padding: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba($color: $main-color, $alpha: 0.6);
+
+    .stat {
+      text-align: center;
+
+      i {
+        font-size: 1.5rem;
+        background-color: #000;
+        border-radius: 50%;
+        padding: 1rem;
+      }
+
+      h3 {
+        font-size: 4rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .stats {
+    .stats__content {
+      flex-direction: column;
+
+      .stat {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}
