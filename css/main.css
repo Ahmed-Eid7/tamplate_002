@@ -423,9 +423,20 @@ header .overlay {
 }
 .portfolio {
   padding-block: 10rem;
+  text-align: center;
 }
 .portfolio .container {
   margin-bottom: 4rem;
+}
+.portfolio .btn {
+  text-transform: uppercase;
+  background-color: #d5bdaf;
+  color: #000;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  margin-top: 5rem;
+  border-radius: 3px;
+  display: inline-block;
 }
 
 .portfolio__filter ul {
