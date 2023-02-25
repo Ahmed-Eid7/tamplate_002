@@ -6,7 +6,9 @@
 
 .services__content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  align-items: center;
+  justify-content: center;
   gap: 3rem;
 
   .service {
@@ -33,10 +35,14 @@
   }
 }
 @media (max-width: 767px) {
-  .service {
-    flex-direction: column;
-    text-align: center;
-    margin-top: 3rem;
-    gap: 2rem;
+  .services__content {
+    .service {
+      flex-direction: column;
+      text-align: center;
+      margin-top: 3rem;
+      gap: 2rem;
+      width: 100%;
+      padding-inline: 6rem;
+    }
   }
 }

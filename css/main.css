@@ -327,7 +327,13 @@ header .overlay {
 .services__content {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 3rem;
 }
 .services__content .service {
@@ -351,7 +357,7 @@ header .overlay {
 }
 
 @media (max-width: 767px) {
-  .service {
+  .services__content .service {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -359,6 +365,8 @@ header .overlay {
     text-align: center;
     margin-top: 3rem;
     gap: 2rem;
+    width: 100%;
+    padding-inline: 6rem;
   }
 }
 .showcase {
@@ -391,14 +399,14 @@ header .overlay {
   padding: 4rem;
   width: 50%;
 }
-.showcase .showcase__content ul h2 {
-  text-transform: uppercase;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-}
 .showcase .showcase__content ul li {
   font-size: 2rem;
   margin-bottom: 1.5rem;
+}
+.showcase .showcase__content ul li:first-of-type {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
 }
 .showcase .showcase__content ul li i {
   margin-right: 2rem;
@@ -412,4 +420,85 @@ header .overlay {
     width: 100%;
     margin-block: 5rem;
   }
+}
+.portfolio {
+  padding-block: 10rem;
+}
+.portfolio .container {
+  margin-bottom: 4rem;
+}
+
+.portfolio__filter ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.portfolio__filter ul li {
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+.portfolio__filter ul li:hover {
+  background-color: #d5bdaf;
+}
+.portfolio__filter ul li.active {
+  background-color: #d5bdaf;
+}
+
+.portfolio__projects {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  row-gap: 5px;
+}
+.portfolio__projects .project {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio__projects .project img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.portfolio__projects .project .project--info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  width: 100%;
+  padding: 1rem 2rem;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+.portfolio__projects .project .project--info h3 {
+  color: #d5bdaf;
+  font-size: 2rem;
+}
+.portfolio__projects .project .project--info p {
+  font-size: 1.5rem;
+}
+.portfolio__projects .project:hover .project--info {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.portfolio__projects .project:hover img {
+  -webkit-transform: scale(1.3) rotate(10deg);
+          transform: scale(1.3) rotate(10deg);
 }
