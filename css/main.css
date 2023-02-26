@@ -772,3 +772,26 @@ header .overlay {
             flex-direction: column;
   }
 }
+.showcase-3 {
+  background-image: url(../../assets/showcase-3.jpg);
+  background-size: cover;
+}
+.showcase-3 blockquote {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding-block: 10rem;
+}
+.showcase-3 blockquote q {
+  font-size: 3.5rem;
+  display: block;
+  width: 70%;
+  margin-inline: auto;
+}
+.showcase-3 blockquote cite {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  display: inline-block;
+}
