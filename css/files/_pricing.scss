@@ -1,0 +1,89 @@
+@use "./variable" as *;
+
+.pricing {
+  padding-block: 10rem;
+
+  .container {
+    text-align: center;
+    > p {
+      font-size: 3rem;
+      margin-block: 4rem 2rem;
+    }
+
+    > .btn {
+      background-color: $main-color;
+      width: fit-content;
+      color: #fff;
+      padding: 1rem 2rem;
+      font-size: 2.5rem;
+      margin-inline: auto;
+    }
+  }
+}
+
+.pricing__plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 3rem;
+
+  .plan {
+    text-align: center;
+    background-color: #f9f9f9;
+
+    .price {
+      font-size: 2rem;
+      font-weight: bold;
+      border-block: 2px solid $main-color;
+      padding-block: 2rem;
+
+      p {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: normal;
+      }
+
+      div {
+        sup {
+          font-size: 1.5rem;
+          margin-right: 1rem;
+        }
+
+        span {
+          font-size: 4rem;
+        }
+      }
+    }
+
+    .features {
+      li {
+        padding-block: 2rem;
+        font-size: 1.5rem;
+        width: 60%;
+        margin-inline: auto;
+      }
+
+      li:not(li:last-child) {
+        border-bottom: 1px solid $main-color;
+      }
+    }
+  }
+
+  .btn {
+    border-block: 2px solid $main-color;
+    padding-block: 4rem;
+
+    a {
+      border: 1px solid $main-color;
+      color: #000;
+      padding: 1rem 2rem;
+      font-size: 1.7rem;
+      transition: all $transition;
+
+      &:hover {
+        color: #fff;
+        background-color: $main-color;
+      }
+    }
+  }
+}

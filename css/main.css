@@ -795,3 +795,79 @@ header .overlay {
   margin-top: 2rem;
   display: inline-block;
 }
+
+.pricing {
+  padding-block: 10rem;
+}
+.pricing .container {
+  text-align: center;
+}
+.pricing .container > p {
+  font-size: 3rem;
+  margin-block: 4rem 2rem;
+}
+.pricing .container > .btn {
+  background-color: #d5bdaf;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 2.5rem;
+  margin-inline: auto;
+}
+
+.pricing__plans {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 3rem;
+}
+.pricing__plans .plan {
+  text-align: center;
+  background-color: #f9f9f9;
+}
+.pricing__plans .plan .price {
+  font-size: 2rem;
+  font-weight: bold;
+  border-block: 2px solid #d5bdaf;
+  padding-block: 2rem;
+}
+.pricing__plans .plan .price p {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+.pricing__plans .plan .price div sup {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.pricing__plans .plan .price div span {
+  font-size: 4rem;
+}
+.pricing__plans .plan .features li {
+  padding-block: 2rem;
+  font-size: 1.5rem;
+  width: 60%;
+  margin-inline: auto;
+}
+.pricing__plans .plan .features li:not(li:last-child) {
+  border-bottom: 1px solid #d5bdaf;
+}
+.pricing__plans .btn {
+  border-block: 2px solid #d5bdaf;
+  padding-block: 4rem;
+}
+.pricing__plans .btn a {
+  border: 1px solid #d5bdaf;
+  color: #000;
+  padding: 1rem 2rem;
+  font-size: 1.7rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.pricing__plans .btn a:hover {
+  color: #fff;
+  background-color: #d5bdaf;
+}
