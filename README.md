@@ -2,8 +2,7 @@
 
 ### This website Created by using:
 - Html
-- Css
-- SCSS
+- Css (SCSS)
 
 In css I use BEM Methodology sometimes for more organization and this website fully responsive
 
