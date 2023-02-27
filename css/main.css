@@ -945,3 +945,75 @@ header .overlay {
             flex-direction: column;
   }
 }
+.contact {
+  padding-block: 10rem;
+}
+
+.contact__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+}
+.contact__content form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+}
+.contact__content form input {
+  display: block;
+}
+.contact__content form input,
+.contact__content form textarea {
+  padding: 1.5rem;
+  width: 100%;
+  margin-bottom: 3rem;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+  border: 1px solid #ccc;
+}
+.contact__content form button {
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  background-color: #d5bdaf;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+}
+.contact__content .address {
+  width: 20%;
+}
+.contact__content .address .phone,
+.contact__content .address .place {
+  margin-bottom: 5rem;
+}
+.contact__content .address .phone h3,
+.contact__content .address .place h3 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
+.contact__content .address .phone p,
+.contact__content .address .place p {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #777;
+}
+.contact__content .place p {
+  font-style: italic;
+}
+
+@media (max-width: 767px) {
+  .contact__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: center;
+  }
+  .contact__content .address {
+    width: 100%;
+  }
+}
